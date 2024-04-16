@@ -5,7 +5,6 @@ elem.addEventListener("input", handleInput);
 
 let item = document.querySelector("#output");
 let out = document.createElement("div");
-//out.setAttribute("class", "message");
 item.append(out);
 
 function handleInput(event) {
