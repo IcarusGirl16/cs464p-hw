@@ -15,7 +15,6 @@ function handleInput(event) {
 
 const charaSearch = (input) => {
   let result = [];
-  console.log(elem.value);
   input.forEach((element) => {
     if (element.name.includes(elem.value)) {
       result.push(element);
