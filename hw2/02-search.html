@@ -13,12 +13,12 @@
   </head>
   <body class="bg-dark">
     <main class="container mt-5">
-      <section class="mx-5 p-3 bg-light border rounded text-center">
+      <section class="mx-5 p-3 bg-light border rounded text-center" id="holder">
       <h1>Exercise 02 - Search</h1>
       <div>
-        <label for="userInput">Search: </label>
+        <label for="userInput" hidden >Search </label>
         <input type="text" id="userInput" />
-        <input type="button" value="Search Character: " id="search" />
+        <input type="button" value="Search" id="search" class="btn btn-primary"/>
       </div>
       <div id="results"></div>
       </section>
