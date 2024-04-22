@@ -40,10 +40,12 @@ const createCharaCard = (chara) => {
   let pattern = new RegExp(`${textToSearch}`, "gi");
 
   name.textContent = chara.name;
-  name.innerHTML = name.textContent.replace(
-    pattern,
-    (match) => `<mark style="background-color: yellow">${match}</mark>`
-  );
+  if (textToSearch !== "") {
+    name.innerHTML = name.textContent.replace(
+      pattern,
+      (match) => `<mark style="background-color: yellow">${match}</mark>`
+    );
+  }
   height.textContent = `Height: ${chara.height}`;
   birth_year.textContent = `Birth Year: ${chara.birth_year}`;
 
