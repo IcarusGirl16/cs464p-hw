@@ -27,7 +27,7 @@ const charaSearch = (input) => {
 
 const createCharaCard = (chara) => {
   const container = document.createElement("section");
-  container.setAttribute("class", "character border rounded m-2 card");
+  container.setAttribute("class", "character border rounded m-2 pt-3 card");
   container.setAttribute("style", "width: 16rem");
   let name = document.createElement("h4");
   name.setAttribute("class", "name");
@@ -35,8 +35,15 @@ const createCharaCard = (chara) => {
   height.setAttribute("class", "height");
   let birth_year = document.createElement("p");
   birth_year.setAttribute("class", "year");
+  let textToSearch = elem.value;
+  textToSearch = textToSearch.replace(/[.*+?^${}()|[|]\\]/g, "\\$&");
+  let pattern = new RegExp(`${textToSearch}`, "gi");
 
   name.textContent = chara.name;
+  name.innerHTML = name.textContent.replace(
+    pattern,
+    (match) => `<mark style="background-color: yellow">${match}</mark>`
+  );
   height.textContent = `Height: ${chara.height}`;
   birth_year.textContent = `Birth Year: ${chara.birth_year}`;
 
