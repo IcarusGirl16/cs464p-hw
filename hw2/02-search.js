@@ -1,4 +1,4 @@
-// Add your code here
+// Sources: https://youtu.be/Ixt6k9aatPQ  (Highlighting in JavaScript)
 
 search.addEventListener("click", handleClick);
 const section = document.getElementById("holder");
