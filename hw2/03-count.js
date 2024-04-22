@@ -9,7 +9,7 @@ function handleKeyDown(event) {
   console.log(textToSearch);
   textToSearch = textToSearch.replace(/[.*+?^${}()|[|]\\]/g, "\\$&");
   let pattern = new RegExp(`${textToSearch}`, "gi");
-  if (textToSearch !== "" || textToSearch !== " ") {
+  if (textToSearch !== "" && textToSearch !== " ") {
     paragraph.innerHTML = paragraph.textContent.replace(
       pattern,
       (match) => `<mark style="background-color: yellow">${match}</mark>`
