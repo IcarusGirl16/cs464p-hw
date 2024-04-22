@@ -2,13 +2,28 @@
 
 search.addEventListener("click", handleClick);
 const section = document.getElementById("holder");
-
-//const elem = document.querySelector("input");
-//userInput.addEventListener("input", handleInput);
+const elem = document.querySelector("input");
 
 function handleClick(event) {
-  displayCharacters(characters);
+  handleInput(event);
 }
+
+function handleInput(event) {
+  const result = charaSearch(characters);
+  displayCharacters(result);
+}
+
+const charaSearch = (input) => {
+  let result = [];
+  console.log(elem.value);
+  input.forEach((element) => {
+    if (element.name.includes(elem.value)) {
+      result.push(element);
+    }
+  });
+
+  return result;
+};
 
 const createCharaCard = (chara) => {
   const container = document.createElement("section");
