@@ -1,4 +1,5 @@
-// Add your code here
+// Sources: https://stackoverflow.com/questions/1484506/random-color-generator
+//          https://developer.mozilla.org/en-US/docs/Web/API/setInterval
 
 change.addEventListener("click", handleClick);
 seconds.addEventListener("input", handleInput);
