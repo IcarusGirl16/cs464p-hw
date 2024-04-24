@@ -11,31 +11,69 @@
     />
     <script defer src="05-form.js"></script>
   </head>
-  <body>
-    <main>
-      <form>
-        <h1>Exercise 05 - Form</h1>
+  <body class="bg-dark">
+    <main class="container mt-5">
+      <form class="mx-5 p-3 bg-light border rounded">
+        <h1 class="text-center">Exercise 05 - Form</h1>
         <div>
-          <label for="fullname">Full Name: </label>
-          <input type="text" id="fullname" />
+          <label for="fullname" style="font-weight: bold">Full Name: </label>
+          <br />
+          <input class="form-control" type="text" id="fullname" />
         </div>
         <br />
         <div>
-          <label for="email">Email: </label>
-          <input type="email" id="email" />
+          <label for="email" style="font-weight: bold">Email: </label>
+          <br />
+          <input class="form-control" type="email" id="email" />
         </div>
         <br />
         <div>
-          <label>Registration Status: </label>
+          <label for="regstat" style="font-weight: bold"
+            >Registration Status:
+          </label>
+          <br />
+          <select class="form-select" id="regstat">
+            <option selected>Choose an Option</option>
+            <option value="Registered Full Time">Registered Full Time</option>
+            <option value="Registered Part Time">Registered Part Time</option>
+            <option value="Not Registered">Not Registered</option>
+          </select>
         </div>
         <br />
         <div>
-          <label>Have you taken any of the following courses?</label>
+          <p style="font-weight: bold">
+            Have you taken any of the following courses?
+          </p>
+          <input class="form-check-input" type="checkbox" id="proglang" />
+          <label for="proglang">Programming Languages</label>
+          <br />
+          <input class="form-check-input" type="checkbox" id="opsys" />
+          <label for="opsys">Operating Systems</label>
+          <br />
+          <input class="form-check-input" type="checkbox" id="fullstack" />
+          <label for="fullstack">Full Stack Web Development</label>
         </div>
         <br />
         <div>
-          <label for="other">Anything Else?</label>
-          <input type="text" id="other" />
+          <label for="other" style="font-weight: bold">Anything Else?</label>
+          <br />
+          <textarea class="form-control" id="other"></textarea>
+          <br />
+          <div class="d-flex gap-1">
+            <input
+              class="btn btn-primary col-6"
+              type="submit"
+              value="Submit"
+              id="submit"
+              onClick=""
+            />
+            <input
+              class="btn btn-secondary col-6"
+              type="reset"
+              value="Reset"
+              id="reset"
+            />
+          </div>
         </div>
       </form>
     </main>
