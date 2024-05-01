@@ -1,7 +1,6 @@
 let fullname = document.querySelector("#fullname");
 let email = document.querySelector("#email");
 let regstatus = document.querySelector("#regstat");
-//let classlist = document.querySelectorAll('input[type="checkbox"]:checked');
 let thoughts = document.querySelector("#other");
 let modal = new bootstrap.Modal(document.getElementById("sub-modal"));
 
@@ -23,22 +22,17 @@ function addToModal() {
   status.textContent = `Registration Status: ${regstatus.value}`;
   comment.textContent = `Anything Else: ${thoughts.value}`;
   classesLabel.textContent = "Classes Taken: ";
-  /*
-  classlist.forEach((checkbox) => {
-    let item = document.createElement("li");
-    item.textContent = checkbox.value;
-    classes.append(item);
-  });
-*/
 
   let checkedCheckboxes = document.querySelectorAll(
     'input[type="checkbox"]:checked'
   );
+
   checkedCheckboxes.forEach((checkbox) => {
     let item = document.createElement("li");
     item.textContent = checkbox.value;
     classes.append(item);
   });
+
   holder.append(name);
   holder.append(address);
   holder.append(status);
