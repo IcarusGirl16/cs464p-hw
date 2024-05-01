@@ -44,7 +44,7 @@ const createCharaCard = (chara) => {
   if (textToSearch !== "") {
     name.innerHTML = name.textContent.replace(
       pattern,
-      (match) => `<mark style="background-color: yellow">${match}</mark>`
+      (match) => `<span style="background-color: yellow">${match}</span>`
     );
   }
   height.textContent = `Height: ${chara.height}`;
