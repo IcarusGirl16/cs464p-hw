@@ -16,7 +16,9 @@ function handleInput(event) {
 const charaSearch = (input) => {
   let result = [];
   input.forEach((element) => {
-    if (element.name.includes(elem.value)) {
+    let storedName = element.name.toLowerCase();
+    let searched = elem.value.toLowerCase();
+    if (storedName.includes(searched)) {
       result.push(element);
     }
   });
