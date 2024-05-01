@@ -1,5 +1,6 @@
 // Sources: https://stackoverflow.com/questions/1484506/random-color-generator
 //          https://developer.mozilla.org/en-US/docs/Web/API/setInterval
+//          https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/rgb
 
 change.addEventListener("click", handleClick);
 seconds.addEventListener("input", handleInput);
@@ -39,12 +40,10 @@ function changeButton() {
 }
 
 function colorGenerator() {
-  let colorValues = "0123456789ABCDEF";
-  let color = "#";
-
-  for (let i = 0; i < 6; i++) {
-    color += colorValues[Math.floor(Math.random() * 16)];
-  }
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  let color = "rgb(" + r + "," + g + "," + b + "," + 0.3 + ")";
   console.log(color);
   return color;
 }
