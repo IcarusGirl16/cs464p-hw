@@ -17,10 +17,10 @@ function addToModal() {
   let classes = document.createElement("p");
   let comment = document.createElement("p");
 
-  name.textContent = fullname.value;
-  address.textContent = email.value;
-  status.textContent = regstatus.value;
-  comment.textContent = thoughts.value;
+  name.textContent = `Full name: ${fullname.value}`;
+  address.textContent = `Email: ${email.value}`;
+  status.textContent = `Registration Status: ${regstatus.value}`;
+  comment.textContent = `Anything Else: ${thoughts.value}`;
 
   classlist.forEach((checkbox) => {
     let item = document.createElement("li");
@@ -36,7 +36,8 @@ function addToModal() {
   popup.append(holder);
 }
 
-function showModal() {
+function showModal(event) {
+  event.preventDefault();
   addToModal();
   modal.show();
 }
