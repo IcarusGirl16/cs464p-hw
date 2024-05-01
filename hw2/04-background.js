@@ -26,7 +26,6 @@ function handleClick(event) {
 
 function handleInput() {
   interval = Number(seconds.value * 1000);
-  console.log(interval);
 }
 
 function changeButton() {
@@ -44,7 +43,7 @@ function colorGenerator() {
   let g = Math.floor(Math.random() * 256);
   let b = Math.floor(Math.random() * 256);
   let color = "rgb(" + r + "," + g + "," + b + "," + 0.3 + ")";
-  console.log(color);
+
   return color;
 }
 
