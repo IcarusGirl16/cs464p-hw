@@ -1,7 +1,7 @@
-userInput.addEventListener("keydown", handleKeyDown);
+userInput.addEventListener("input", handleInput);
 const elem = document.querySelector("input");
 
-function handleKeyDown(event) {
+function handleInput(event) {
   let paragraph = document.getElementById("text");
   let textToSearch = elem.value;
   console.log(textToSearch);
