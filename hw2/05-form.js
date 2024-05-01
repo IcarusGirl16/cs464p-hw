@@ -1,4 +1,3 @@
-// Add your code here
 let fullname = document.querySelector("#fullname");
 let email = document.querySelector("#email");
 let regstatus = document.querySelector("#regstat");
@@ -24,7 +23,7 @@ function addToModal() {
   comment.textContent = thoughts.value;
 
   classlist.forEach((checkbox) => {
-    let item = document.createElement("ul");
+    let item = document.createElement("li");
     item.textContent = checkbox.value;
     classes.append(item);
   });
