@@ -10,7 +10,13 @@ function handleInput(event) {
   if (textToSearch !== "" && textToSearch !== " ") {
     paragraph.innerHTML = paragraph.textContent.replace(
       pattern,
-      (match) => `<span style="background-color: yellow">${match}</span>`
+      (match) =>
+        `<span style="background-color: yellow" class="highlight">${match}</span>`
     );
+  } else {
+    let erase = document.querySelectorAll(".highlight");
+    erase.forEach((element) => {
+      element.removeAttribute("style");
+    });
   }
 }
