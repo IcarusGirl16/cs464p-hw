@@ -38,7 +38,7 @@ export default function List() {
 function CountryCard ({country}) {
   return (
   <section className="country border p-4 m-4 rounded shadow-md flex flex-col items-center">
-    <p className="name font-bold text-lg">{country.name}</p>
+    <h2 className="name font-bold text-lg">{country.name}</h2>
     <img className="flag w-32 h-20 object-cover my-2" src={country.flag_png} alt={country.flag_alt} />
     <p className="pop">Population: {country.population}</p>
     <p className="gdp">GDP in Billions: {country.gdp_billions}</p>
