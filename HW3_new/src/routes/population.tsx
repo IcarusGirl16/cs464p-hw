@@ -107,7 +107,7 @@ export default function Population() {
         <div>
         <h1>Population</h1>
         <p>This page displays a bar chart showing population for each country.</p>
-        <Bar options={options} data={chartData} />
+        <Bar options={options} data={chartData} className="p-4 mx-12"/>
         </div>
       </main>
     </>

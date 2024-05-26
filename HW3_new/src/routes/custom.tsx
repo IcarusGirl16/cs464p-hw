@@ -102,7 +102,7 @@ export default function Custom() {
       <main id='custom' className='mt-20 p-4'>
         <h1>Official Languages per Country</h1>
         <p>This page displays a polar area chart showing the number of official languages per country.</p>
-        <PolarArea data={chartData} options={options} />
+        <PolarArea data={chartData} options={options} className="p-4 mx-24"/>
       </main>
     </>
   );
